@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>New Customer Information</h2>
+        <form action="/action_page.php">
+            <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input (input)="fName=$event.target.value" type="text" class="form-control" id="fname" placeholder="This is a mandatory field" name="fname">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input (input)="lName=$event.target.value" type="text" class="form-control" id="lname" placeholder="This is a mandatory field"  name="lname">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input (input)="email=$event.target.value" type="email" class="form-control" id="email" placeholder="This is a mandatory field" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input (input)="pass=$event.target.value" type="password" class="form-control" id="pwd" placeholder="This is a mandatory field" name="pwd">
+            </div>
+            <div class="form-group">
+                <label for="rpwd">Re-nter Password:</label>
+                <input (input)="rPass=$event.target.value" type="password" class="form-control" id="rpwd" placeholder="This is a mandatory field" name="rpwd">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input (input)="phone=$event.target.value" type="text" class="form-control" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="street">Street Number and Name:</label>
+                <input (input)="street=$event.target.value" type="text" class="form-control" id="stree">
+            </div>
+            <!--
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" class="form-control" id="city">
+            </div>
+        -->
+            <div class="form-group">
+                <label for="postcode">Post Code:</label>
+                <input (input)="postCd=$event.target.value" type="text" class="form-control" id="postcode">
+            </div>
+            <div class="form-group">
+                <label for="province">Province:</label>
+                <input (input)="state=$event.target.value" type="text" class="form-control" id="province">
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input (input)="country=$event.target.value" type="text" class="form-control" id="country">
+            </div>
+            
+            <button (click)='fieldCheck()' type="submit" class="btn btn-primary">Submit</button>
+            
+            <button (click)='return()' type="button" class="btn btn-default">Cancel</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<body>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">Edit Card</div>
+      <!--variable in future-->
+
+
+
+
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-9"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">Card Type</div>
+      <div class="col-sm-5">
+        <select [(ngModel)]="selectedType" class="form-control">
+          <option value="default">Select</option>
+          <option value="debit">Debit</option>
+          <option value="credit">Credit</option>
+          <option value="other">Other</option>
+        </select>
+        <button (click)='setCardType()' type="submit" class="btn btn-primary">Submit</button>
+        <!--
+        <div class="dropdown">
+          <button class="dropdown-toggle" size="50%" type="button" data-toggle="dropdown">Select type</button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Debit</a>
+            </li>
+            <li>
+              <a href="#">Visa</a>
+            </li>
+            <li>
+              <a href="#">Mastercard</a>
+            </li>
+          </ul>
+        </div>
+
+      -->
+
+
+
+
+
+
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">Financial Institution</div>
+      <div class="col-sm-5">
+        <select [(ngModel)]="selectedInst" class="form-control">
+          <option value="0">Select</option>
+          <option value=1>TD</option>
+          <option value=2>CIBC</option>
+          <option value=3>BMO</option>
+          <option value=4>Scotiabank</option>
+          <option value=5>RBC</option>
+          <option value=99>Other</option>
+        </select>
+        <!--
+        <div class="dropdown">
+          <button class="dropdown-toggle" size="50%" type="button" data-toggle="dropdown">Select institution</button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">TD</a>
+            </li>
+            <li>
+              <a href="#">CIBC</a>
+            </li>
+            <li>
+              <a href="#">RBC</a>
+            </li>
+          </ul>
+        </div>
+      -->
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">Card Number</div>
+      <div class="col-sm-9">
+        <input (input)="cardNum=$event.target.value" type="text" size="50%" />
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">Expiry Date</div>
+      <div class="col-sm-2">
+          <select [(ngModel)]="selectedMonth" class="form-control">
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+<!--
+        <div class="dropdown">
+          <button class="dropdown-toggle" size="50%" type="button" data-toggle="dropdown">Month</button>
+          <ul class="dropdown-menu">
+            <li>
+              <a>1</a>
+            </li>
+            <li>
+              <a>2</a>
+            </li>
+            <li>
+              <a>3</a>
+            </li>
+            <li>
+              <a>4</a>
+            </li>
+            <li>
+              <a>12</a>
+            </li>
+          </ul>
+        </div>
+            -->
+      </div>
+
+      <div class="col-xs-1" style=" padding-right:1px; padding-left:15px">
+        <div style="font-size:20px; padding-right:1px; padding-left:1px">/</div>
+      </div>
+      <div class="col-xs-2" style=" padding-right:1px; padding-left:1px">
+          <select [(ngModel)]="selectedYear" class="form-control">
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+            </select>
+        <!--
+        <div class="dropdown">
+          <button class="dropdown-toggle" size="50%" type="button" data-toggle="dropdown">Day</button>
+          <ul class="dropdown-menu">
+            <li>
+              <a>1</a>
+            </li>
+            <li>
+              <a>2</a>
+            </li>
+            <li>
+              <a>3</a>
+            </li>
+            <li>
+              <a>4</a>
+            </li>
+            <li>
+              <a>12</a>
+            </li>
+          </ul>
+        </div>
+      -->
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">Name</div>
+      <div class="col-sm-9">
+          <input (input)="name=$event.target.value" type="text" size="50%" />
+      </div>
+    </div>
+
+    <br/>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-2">Security Code</div>
+      <div class="col-sm-9">
+          <input (input)="secCode=$event.target.value" type="text" size="50%" />
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-5">
+        <button (click)='cancel()' type="button" class="btn btn-default">Cancel</button>
+      </div>
+      <div class="col-sm-5">
+        <button (click)='addCard()' type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>

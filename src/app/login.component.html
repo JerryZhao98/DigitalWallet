@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">Login</div>
+  </div>
+
+
+
+
+
+  <br/>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2">Email</div>
+    <div class="col-sm-9">
+      <input [(ngModel)]=email type="text" size="50%" />
+    </div>
+  </div>
+
+  <br/>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2">Password</div>
+    <div class="col-sm-9">
+      <input [(ngModel)]=pass type="password" size="50%" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-5">
+      <a>Forgot password</a>
+    </div>
+    <div class="col-sm-5"></div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5">
+      <button (click)='register()' type="button" class="btn btn-default">Register</button>
+    </div>
+    <div class="col-sm-5">
+      <button (click)='verifyLogin()' type="submit" class="btn btn-primary">Login</button>
+    </div>
+  </div>
+</div>
